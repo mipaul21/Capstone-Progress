@@ -1,0 +1,111 @@
+﻿<Window x:Class="PresentationWPF.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PresentationWPF"
+        mc:Ignorable="d"
+        Title="HomeScreen" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="175"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Width="35" Height="35" Grid.Column="0"
+                    Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"
+                    Margin="5,5,0,5"/>
+            <Button x:Name="btnForward" Content="Forward" HorizontalAlignment="Right" Width="35" Height="35" Grid.Column="0"
+                    Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"
+                    Margin="0,5,0,5"/>
+            <Button x:Name="btnFile" Content="File" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60"
+                    Grid.Column="1"  Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"
+                    Margin="0,5,0,5"/>
+            <Button x:Name="btnNotes" Content="Notes" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60"
+                    Grid.Column="2"  Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"
+                    Margin="0,5,0,5"/>
+            <Button x:Name="btnMessages" Content="Messages" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60"
+                    Grid.Column="3"  Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"
+                    Margin="0,5,0,5"/>
+            <Button x:Name="btnHelp" Content="Help" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60"
+                    Grid.Column="4"  Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"
+                    Margin="0,5,0,5"/>
+            <Label x:Name="lblUser" Content="Username" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="120"
+                   Grid.Column="5" Foreground="#FF2767F1" BorderBrush="#FF2767F1" Margin="0,5,0,5" />
+            <Button x:Name="btnSettings" Content="Settings" HorizontalAlignment="Right" VerticalAlignment="Center" Width="35"
+                    Height="35" Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1" Grid.Column="5"
+                    Margin="0,5,50,5"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblAdminsList" Content="Admins" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24"
+                   Grid.Column="0" Foreground="#FF2767F1" Margin="0,0,0,-5" />
+            <Label x:Name="lblUserName" Content="Username" FontSize="36" Grid.Column="1" Foreground="#FF2767F1" 
+                   Margin="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="lbxAdmin" Grid.Column="0" HorizontalContentAlignment="Center" FontSize="21" Margin="5,5,5,5">Admin1</ListBox>
+            <TextBlock x:Name="txtPhoto" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,5,5,5">
+                Photo will go here</TextBlock>
+            <Calendar x:Name="cldrCalender" Grid.Column="2" Margin="5,5,5,5" />
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lblCaregiversList" Content="Caregivers" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24"
+                   Grid.Column="0" Foreground="#FF2767F1" Margin="0,0,0,-5" />
+            <Button x:Name="btnGoals" Content="Goals" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="18" Grid.Column="1"
+                    Width="75" Margin="5,5,5,0" Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"/>
+            <Button x:Name="btnRoutines" Content="Routines" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="18" Grid.Column="1"
+                    Width="75" Margin="5,5,5,0" Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"/>
+            <Button x:Name="btnJournals" Content="Journals" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="18" Grid.Column="1"
+                    Width="75" Margin="5,5,5,0" Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"/>
+            <Label x:Name="lblNotificationsList" Content="Notifications" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="24"
+                   Grid.Column="2" Foreground="#FF2767F1" Margin="0,0,0,-5" />
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="lbxCaregivers" Grid.Column="0" HorizontalContentAlignment="Center" FontSize="21" Margin="5,5,5,5">Caregiver1</ListBox>
+            <Button x:Name="btnProgress" Content="Progress" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" Grid.Column="1"
+                    Width="75" Margin="5,5,5,0" Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"/>
+            <Button x:Name="btnRewards" Content="Rewards" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Grid.Column="1"
+                    Width="75" Margin="5,5,5,0" Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"/>
+            <Button x:Name="btnTasks" Content="Tasks" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="18" Grid.Column="1"
+                    Width="75" Margin="5,5,5,0" Background="#FF9CCBEC" Foreground="#FF2767F1" BorderBrush="#FF2767F1"/>
+            <ListBox x:Name="lbxNotifications" Grid.Column="2" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="250" 
+                     FontSize="18" Margin="5,5,5,5">Notification1</ListBox>
+        </Grid>
+    </Grid>
+</Window>
